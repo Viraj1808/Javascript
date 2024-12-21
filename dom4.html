@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Example</title>
+</head>
+<body>
+    <h1>DOM Manipulation Example: Create Element</h1>
+    <div id="div1">This is the parent div </div>
+    
+</body>
+   <script>
+        // Create a new div element
+        var element = document.createElement("h1");
+        element.innerHTML = "This is a dynamically created div element!";
+        
+        // Append the new div to the body
+        document.getElementById('div1').appendChild(element);
+
+    </script>
+</html>

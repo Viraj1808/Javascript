@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Example</title>
+</head>
+<body>
+   
+    <div id="div1">This is the parent div
+      <h1 id="h1">DOM Manipulation Example: Create Element</h1>
+    </div>
+    
+    <script>
+        var parent = document.getElementById('div1');    // Get the parent div
+        var h1Element = document.getElementById('h1');    // Get the h1 element
+        
+        // Remove the h1 element from the parent div
+        parent.removeChild(h1Element);
+    </script>
+</body>
+</html>
