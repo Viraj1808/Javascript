@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id="div1">
+		this is a parent div.<br>
+		<img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSismYESZ_jdCgkPdqgUmejMyyidiFha9iaDQ&s">
+		<img id="img1"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSismYESZ_jdCgkPdqgUmejMyyidiFha9iaDQ&s" width="" height="200px">
+	</div>
+	<script>
+		var parent = document.getElementById('div1');
+		var imgelement = document.getElementById('img');  
+		parent.removeChild(imgelement);
+		var imgElement = document.getElementById('img1');
+		imgElement.setAttribute('src','https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/1024px-Flag_of_India.svg.png')
+	</script>
+
+</body>
+</html>
