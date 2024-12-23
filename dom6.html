@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<ul>
+	<li class="litag">list 1</li>
+	<li class="litag">list 2</li>
+	<li class="litag">list 3</li>
+	<li class="litag">list 4</li>
+</ul>
+<p>This is the paragraph</p>
+<p>this is another paragraph</p>
+
+</body>
+<script type="text/javascript">
+    // Initialize the index for the list items
+    let index = 0;
+
+    function fun() {
+        // Get all list items with class "litag"
+         document.getElementsByClassName('litag')[index].innerHTML="this is changed by the selector";
+         index++;
+    }
+
+    // Call fun() every 2000 milliseconds (2 seconds)
+    setInterval(fun, 2000);
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<ul>
+	<li class="litag">list 1</li>
+	<li class="litag">list 2</li>
+	<li class="litag">list 3</li>
+	<li class="litag">list 4</li>
+</ul>
+<p>This is the paragraph</p>
+<p>this is another paragraph</p>
+
+</body>
+<script type="text/javascript">
+    // Initialize the index for the list items
+    let index = 0;
+
+    function fun() {
+        // Get all list items with class "litag"
+        const listItems = document.getElementsByClassName('litag');
+        
+        // Check if the index is within bounds of the listItems array
+        if (index < 4) {
+            // Update the innerHTML of the current list item
+            listItems[index].innerHTML = "This List Is Changed By The Selector ";
+            index++;  // Move to the next list item
+        } else {
+            // Reset the index to loop through the items again if needed
+            index = 0;
+        }
+    }
+
+    // Call fun() every 2000 milliseconds (2 seconds)
+    setInterval(fun, 2000);
+</script>
+</html>
