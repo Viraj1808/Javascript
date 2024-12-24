@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<center><img id="img1" src="" width="200px"></center>
+
+
+</body>
+<script type="text/javascript">
+	let index=0;
+	function fun(){
+	const array = ["https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
+		"https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s",
+		"https://encrypted-tbn0.gstatic.com/images?q=tbn:sANd9GcTuJQUDDRaY2o18-2HlaV3ASdtPYOh5MnYCwRewf-JvewVFRFUlVvMAi68&s",
+		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp0BzW6X8xItZQl5CF6LdgX7TcRHL4T-XwgFcLebzgCb5TBoyL8uuvsR0&s"];
+       
+         document.getElementById('img1').src=array[index];
+
+             index++;   
+}
+
+    setInterval(fun,1000);
+</script>
+</html>
