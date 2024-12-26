@@ -3,27 +3,71 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Image Animation</title>
+	<style type="text/css">
+		/* Style for the image */
+		#img1 {
+			width: 200px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 50%; /* Circular image */
+			opacity: 0; /* Start with an invisible image */
+			transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and transform */
+			position: absolute; /* Ensure we can move it left to right */
+		}
+
+		/* Keyframe animation to fade in and slide left to right */
+		@keyframes slideInLeftToRight {
+			0% {
+				opacity: 0;
+				left: -300px; /* Start from left outside of the screen */
+			}
+			50% {
+				opacity: 0.5;
+				left: 50%; /* Move to center */
+			}
+			100% {
+				opacity: 1;
+				left: 0; /* End at the original position */
+			}
+		}
+
+		/* Hover effect to zoom the image */
+		#img1:hover {
+			transform: scale(1.1); /* Slight zoom-in on hover */
+			cursor: pointer; /* Change the cursor to indicate it's clickable */
+		}
+	</style>
 </head>
 <body>
 	<center><img id="img1" src="" width="200px"></center>
 
+	<script type="text/javascript">
+		let index = 0;
+		
+		function fun() {
+			const array = [
+				"https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
+				"https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s",
+				"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp0BzW6X8xItZQl5CF6LdgX7TcRHL4T-XwgFcLebzgCb5TBoyL8uuvsR0&s"
+			];
+			
+			// Change image source and apply the animation
+			if (index <= 3) {
+				const img = document.getElementById('img1');
+				img.style.animation = 'none'; // Reset the animation
+				img.src = array[index];
+				setTimeout(() => {
+					img.style.animation = 'slideInLeftToRight 1s forwards'; // Apply slide animation after image load
+				}, 50); // Slight delay to ensure the image is loaded before the animation starts
+			}
+			// Increment the index
+			index++;   
+		}
 
+		// Set interval to change images every 2 seconds
+		setInterval(fun, 2000);
+	</script>
 </body>
-<script type="text/javascript">
-	let index=0;
-	function fun(){
-	const array = ["https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
-		"https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s",
-		"https://encrypted-tbn0.gstatic.com/images?q=tbn:sANd9GcTuJQUDDRaY2o18-2HlaV3ASdtPYOh5MnYCwRewf-JvewVFRFUlVvMAi68&s",
-		"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp0BzW6X8xItZQl5CF6LdgX7TcRHL4T-XwgFcLebzgCb5TBoyL8uuvsR0&s"];
-       
-         document.getElementById('img1').src=array[index];
-
-             index++;   
-}
-
-    setInterval(fun,1000);
-</script>
 </html>
