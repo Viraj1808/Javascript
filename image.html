@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#div1 {
+	width:100px;
+	height: 100px;
+	background-color: red;
+  animation-name: example;
+  animation-duration:20s;
+  transition:1s;
+  position: relative;
+}
+#div1:hover{
+	width:300px;
+}
+
+@keyframes example {
+  from {left:1px}
+  to {left:1000px}
+}
+</style>
+</head>
+<body>
+<div id="div1">
+
+</div>
+</body>
+<script type="text/javascript">
+    let index = 0;
+    
+    function fun() {
+      const array = [
+      	"green","black","blue","violet","orange","yellow","gray","darkblue"
+
+      ];
+      if (index <=7) {
+        const div = document.getElementById('div1'); // Reset the animation
+        div.style.backgroundColor = array[index];
+        		
+     
+      }
+      index++;   
+    }
+
+    // Set interval to change images every 2 seconds
+    setInterval(fun,1000);
+  </script>
+</html>
+
+

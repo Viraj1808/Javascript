@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#img1 {
+	width:650px;
+	height: 650px;
+  
+  animation-duration: 4s;
+  position: relative;
+}
+
+@keyframes example {
+  from {left:1px}
+  to {left:690px}
+}
+</style>
+</head>
+<body>
+
+<img id="img1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/ChatGPT-Logo.svg/120px-ChatGPT-Logo.svg.png" width="200px">
+
+</body>
+<script type="text/javascript">
+    let index = 0;
+    
+    function fun() {
+      const array = [
+        "https://gratisography.com/wp-content/uploads/2024/10/gratisography-cool-cat-800x525.jpg",
+        "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ718nztPNJfCbDJjZG8fOkejBnBAeQw5eAUA&s",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp0BzW6X8xItZQl5CF6LdgX7TcRHL4T-XwgFcLebzgCb5TBoyL8uuvsR0&s"
+      ];
+      
+      // Change image source and apply the animation
+      if (index <= 3) {
+        const img = document.getElementById('img1');
+        img.style.animation = 'none'; // Reset the animation
+        img.src = array[index];	
+        setTimeout(() => {
+          img.style.animation = 'example 1s forwards'; // Apply slide animation after image load
+        }, 50); // Slight delay to ensure the image is loaded before the animation starts
+      }
+      // Increment the index
+      index++;   
+    }
+
+    // Set interval to change images every 2 seconds
+    setInterval(fun,4000);
+  </script>
+</html>
+
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		#div1{
+			  width: 100px;
+              height: 100px;
+              background-color: red;
+              transition: width 5s;
+		}
+		#div1:hover{
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+	<center><div id="div1">
+
+	</div></center>
+	<script type="text/javascript">
+		let index = 0;
+    
+    function fun() {
+      const array = [
+      	"green","black","yellow","blue","violet"
+      ];
+      
+      // Change image source and apply the animation
+      if (index <= 4) {
+        const div = document.getElementById('div1');
+        div.style.transition= 'none'; // Reset the animation
+        div.style.backgroundColor = array[index];	
+      // Increment the index
+      index++;   
+    }
+}
+
+    // Set interval to change images every 2 seconds
+    setInterval(fun,2000);
+	</script>
+
+</body>
+</html>
