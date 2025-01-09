@@ -1,112 +1,164 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>
-		
-	</title>
-	<style type="text/css">
-		.header1{
-			height:120px;
-			background-color:#5A5A5A;
-			color: white;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Viraj Tiles World</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-		}
-		img{
-			height: 80px; width: 80px;
-			position: relative;
-			left: 50px;
-			top: 16px;
-		}
-		.span1{
-			margin-left: 10px;
-			padding-left:20px ;
-			position: relative;
-			left:750px;
-			font-family: inherit;
-			font-size: 18px;
-			top:-5px;
-			text-transform:uppercase;
-			cursor: pointer;
+        .header1 {
+            background-color: #5A5A5A;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
 
-		}
-		.header2{
-			height: 677px	;
-			background-image: url("https://www.simpolo.net/images/slider/home/03.jpg");
+        .header1 video {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: -8px;
+            left: 15px;
+        }
+        .header1 video:hover{
+ transform: scale(1.2);
+        }
 
-			background-size: cover;
-		}
-		#img1{
-			height: 677px;
-			width: 100%;
-			position: relative;
-			top: 0px;
-			left: 12px;
-			animation-duration: 5s;
-		}
-		.img2{
-			
-			    height:109px;
-    width: 190px;
-    border: none
-		}
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
 
+        .span1 {
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
 
-	</style>
-</head>
-<body style="margin: 0px; padding: 0px;">
-	<header>
-		<div class="header1">
-			
-			<img
-			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_R7t4d4-FFyYS2WJIaxLNKmoh16lGb_GEsQ&s">
-			<span class="span1">Home</span> <span
-			class="span1">About</span> <span class="span1">Services</span>
-			<span class="span1">Contact Us</span> </div>
-			<div><img id="img1" src="https://www.simpolo.net/images/slider/home/03.jpg">
-			</div>
-			<div>
-				<img class="img2" src="https://www.simpolo.net/images/tvc/tag-2024.png">
-				<h4 style="text-transform:capitalize;
-    line-height: 24px;
-    color: #373435;
+        .span1:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .header2 img {
+            width: 100%;
+            height: auto;
+            animation: fade-in 1s forwards;
+            transition: transform 0.3s;
+        }
+
+        .header2 img:hover {
+            transform: scale(1.05);
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .img2 {
+                width: 190px;
+    transition: transform 0.3s;
+    position: relative;
+    left: -660px;
+        }
+
+        .img2:hover {
+            transform: scale(1.1);
+        }
+
+        .content h4 {
+                color: #373435;
     font-size: 14px;
-    font-family: Corbert-Medium, sans-serif; margin-left:260px ;
-    margin-top: -80px;width: 1070px;">Hello coustmers Viraj Tiles World is a top 10 partner.they have connected with the 20+ years.they have a silver jubbli partnership between the viraj tiles world and simpolo tiles.Simpolo's Digital Showroom and Virtual Space Creator lets you select tiles and design your home from the comfort of your own space. You can browse the complete range of Simpolo tiles, view 3D previews, and see how selected tiles look on both floors and walls. Additionally, you can customise your space with furniture and fixtures using tiles that fit your budget in ultra-realistic 3D.
+    width: 1080px;
+    margin: 0px auto;
+    margin-top: -103px;
+        }
+        .content h4:hover{
+        	transform: scale(1.01);
+        	color:black;
+        }
 
-Meanwhile, The Smart Code Technology lets you scan and preview tile designs in 3D and 360°. Customise size and space preferences for a better showroom experience.Each tile design comes with Smart Code Technology that allows you to scan and view realistic previews.</h4>
-			</div>
+        @media (max-width: 768px) {
+            .header1 {
+                flex-direction: column;
+                text-align: center;
+            }
 
+            .nav-menu {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
 
+            .content h4 {
+                font-size: 12px;
+                padding: 0 10px;
+            }
 
+            .img2 {
+                width: 150px;
+            }
+        }
 
-		</header>
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header1">
+            <video autoplay loop muted>
+                <source src="file:///C:/Users/Intex/Desktop/virajt/virsaj.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="nav-menu">
+                <span class="span1">Home</span>
+                <span class="span1">About</span>
+                <span class="span1">Services</span>
+                <span class="span1">Contact Us</span>
+            </div>
+        </div>
+        <div class="header2">
+            <img id="img1" src="https://www.simpolo.net/images/slider/home/03.jpg" alt="Slider">
+        </div>
+        <div class="content">
+            <img class="img2" src="https://www.simpolo.net/images/tvc/tag-2024.png" alt="Tag">
+            <h4>Hello customers, Viraj Tiles World is a top 10 partner. They have connected for over 20 years and share a silver jubilee partnership with Simpolo Tiles. Simpolo's Digital Showroom and Virtual Space Creator lets you select tiles and design your home from the comfort of your own space. You can browse the complete range of Simpolo tiles, view 3D previews, and see how selected tiles look on both floors and walls. Additionally, you can customise your space with furniture and fixtures using tiles that fit your budget in ultra-realistic 3D.<br><br>
 
+            Meanwhile, The Smart Code Technology lets you scan and preview tile designs in 3D and 360°. Customise size and space preferences for a better showroom experience. Each tile design comes with Smart Code Technology that allows you to scan and view realistic previews.</h4>
+        </div>
+    </header>
 
+    <script>
+        let index = 0;
+
+        function fun() {
+            const images = [
+                "https://www.simpolo.net/images/slider/home/02.jpg",
+                "https://www.simpolo.net/images/slider/home/01.jpg",
+            ];
+
+            const img = document.getElementById('img1');
+            img.src = images[index];
+            img.style.animation = 'none';
+
+            setTimeout(() => {
+                img.style.animation = 'fade-in 1s forwards';
+            }, 50);
+
+            index = (index + 1) % images.length;
+        }
+
+        setInterval(fun, 5000);
+    </script>
 </body>
-<script type="text/javascript">
-	let index = 0;
-    
-    function fun() {
-      const array = [
-        "https://www.simpolo.net/images/slider/home/02.jpg",
-        "https://www.simpolo.net/images/slider/home/01.jpg",
-      ];
-      
-      // Change image source and apply the animation
-      if (index <= 1) {
-        const img = document.getElementById('img1');
-        img.style.animation = 'none';
-         img.src = array[index];	
-        setTimeout(() => {
-          img.style.animation = 'example 1s forwards'; 
-        }, 50);
-      }
-      index++;   
-    }
-    setInterval(fun,5000);
-
-	
-</script>
 </html>
