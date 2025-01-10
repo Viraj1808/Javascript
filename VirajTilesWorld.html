@@ -39,7 +39,6 @@
         }
         a {
             text-decoration: none;
-
         }
 
         .span1 {
@@ -94,52 +93,81 @@
             color: black;
         }
 
-        .paragraph{
+        .paragraph {
             font-family: Arial, sans-serif;
             font-size: 13px;
             text-transform: capitalize;
-            margin-top:23px;
+            margin-top: 23px;
         }
 
-        .paragraph:hover{
+        .paragraph:hover {
             color: black;
-            cursor:pointer;
-        }
-        h1{
-        	margin-left: 125px;
-    margin-top: 40px;
-    width: 501px;
-    text-transform: capitalize;
-    font-family: robot;
-
-        }
-        h3{
-        	margin-left: 125px;
-    margin-top: 40px;
-        }
-        h5{
-        	margin-left: 125px;
-    margin-top: 40px;
-    font-family: sans-serif;
-    width:445px;
-        }
-        .span2{
-        	font-size: 15px;
-        	margin-left: 125px;
-    margin-top: 40px;
-        }
-        #span3{
-        	border:2px solid gold;
-
+            cursor: pointer;
         }
 
+        h1 {
+            margin-left: 125px;
+            margin-top: 40px;
+            width: 501px;
+            text-transform: capitalize;
+            font-family: robot;
+            cursor: pointer;
+        }
+
+        h3 {
+            margin-left: 125px;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+
+        h5 {
+            margin-left: 125px;
+            margin-top: 40px;
+            font-family: sans-serif;
+            width: 445px;
+            cursor: pointer;
+        }
+
+        .span2 {
+            font-size: 15px;
+            margin-left: 125px;
+            margin-top: 40px;
+            cursor: pointer;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        #img-id {
+            height: 335px;
+            width: 500px;
+            position: relative;
+            left: 684px;
+            top: -357px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #img-id:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Updated section to adjust position of phone number */
+        .contact-info {
+            margin-left: 125px;
+            margin-top: 40px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .contact-info span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Added responsive behavior */
         @media (max-width: 768px) {
             .header1 {
                 flex-direction: column;
                 text-align: center;
-            }
-            .header1:hover{
-                      transform: scale(1.2);
             }
 
             .nav-menu {
@@ -147,26 +175,14 @@
                 gap: 10px;
                 justify-content: center;
             }
-            .nav-menu:hover{
- transform: scale(1.05)
-            }
 
             .content h4 {
                 font-size: 12px;
                 padding: 0 10px;
             }
-            .content h4:hover{
-            	transform: scale(1.01);
-            color: black;
-
-            }
 
             .img2 {
                 width: 150px;
-            }
-            .img2:hover{
-            	transform: scale(1.1);
-
             }
         }
 
@@ -208,15 +224,18 @@
                 </div>
             </div>
         </div>
+
         <h1><b>Welcome to the Viraj tiles world</b></h1>
         <h3>Where We Build Your Visions</h3>
-<h5>Write a warm welcoming message for visitors.You can mention all the benefits or services with some real examples. You can also state how you emphasize on their well being. This often shows your concern and increases the chances of conversion. Tell people a little more to attract.You can mention some contact details as shown below to get in touch with visitors.</h5>
-<div><span class="span2">Call us today</span><br>
-<span class="span2">+91 932-705-7902	</span>
-<span id="span3"></span>
-<!-- <img src="https://www.simpolo.net/images/products/sub-products/01_cloud-onyx-preview.jpg"> -->
+        <h5>Write a warm welcoming message for visitors. You can mention all the benefits or services with some real examples. You can also state how you emphasize their well-being. This often shows your concern and increases the chances of conversion. Tell people a little more to attract. You can mention some contact details as shown below to get in touch with visitors.</h5>
+        
+        <!-- Updated contact section -->
+        <div class="contact-info">
+            <span>Call us today: </span><br>
+            <span>+91 932-705-7902</span>
+        </div>
 
-</div>
+        <img id="img-id" src="https://www.simpolo.net/images/products/sub-products/calcutta-prism-p.jpg">
     </header>
 
     <script>
