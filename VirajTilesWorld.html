@@ -20,15 +20,16 @@
             align-items: center;
             justify-content: space-between;
             padding: 10px 20px;
+            flex-wrap: wrap;
         }
 
         .header1 video {
             width: 100px;
             height: 100px;
             position: relative;
-            top: -8px;
-            left: 15px;
+            border-radius: 50%;
         }
+
         .header1 video:hover {
             transform: scale(1.2);
         }
@@ -36,7 +37,10 @@
         .nav-menu {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
+
         a {
             text-decoration: none;
         }
@@ -50,7 +54,7 @@
         }
 
         .span1:hover {
-            color: black;
+            color: #FFD700;
             transform: scale(1.1);
         }
 
@@ -71,78 +75,35 @@
         }
 
         .img2 {
-            width: 190px;
-            position: relative;
-            top: 20px;
-            transition: transform 0.3s;
+            width: 100%;
+            max-width: 190px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin: auto;
         }
 
         .img2:hover {
             transform: scale(1.1);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .content h4 {
             color: #373435;
-            font-size: 14px;
-            width: 1080px;
-            margin: 0px auto;
-            margin-top: -103px;
-        }
-        .content h4:hover {
-            transform: scale(1.01);
-            color: black;
+            font-size: 16px;
+            width: 90%;
+            margin: 25px auto;
         }
 
-        .paragraph {
-            font-family: Arial, sans-serif;
-            font-size: 13px;
-            text-transform: capitalize;
-            margin-top: 23px;
-        }
-
-        .paragraph:hover {
-            color: black;
-            cursor: pointer;
-        }
-
-        h1 {
-            margin-left: 125px;
+        h1, h3, h5 {
+            text-align: center;
             margin-top: 40px;
-            width: 501px;
-            text-transform: capitalize;
-            font-family: robot;
-            cursor: pointer;
-        }
-
-        h3 {
-            margin-left: 125px;
-            margin-top: 40px;
-            cursor: pointer;
-        }
-
-        h5 {
-            margin-left: 125px;
-            margin-top: 40px;
-            font-family: sans-serif;
-            width: 445px;
-            cursor: pointer;
-        }
-
-        .span2 {
-            font-size: 15px;
-            margin-left: 125px;
-            margin-top: 40px;
-            cursor: pointer;
-            font-family: 'Roboto', sans-serif;
-            color: #333;
         }
 
         #img-id {
-            height: 335px;
-            width: 500px;
-            position: relative;
-            left: 684px;
-            top: -357px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -151,20 +112,24 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Updated section to adjust position of phone number */
         .contact-info {
-            margin-left: 125px;
-            margin-top: 40px;
+            text-align: center;
+            margin: 40px auto;
             font-family: 'Roboto', sans-serif;
         }
 
         .contact-info span {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
         }
 
-        /* Added responsive behavior */
-        @media (max-width: 768px) {
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
             .header1 {
                 flex-direction: column;
                 text-align: center;
@@ -173,22 +138,53 @@
             .nav-menu {
                 flex-wrap: wrap;
                 gap: 10px;
-                justify-content: center;
+            }
+
+            .img2 {
+                max-width: 150px;
+            }
+
+            .content h4 {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            #img-id {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                gap: 8px;
+            }
+
+            .content h4 {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .header1 {
+                padding: 10px;
+                height: 160px;
+            }
+
+            .span1 {
+                font-size: 16px;
             }
 
             .content h4 {
                 font-size: 12px;
-                padding: 0 10px;
             }
 
-            .img2 {
-                width: 150px;
+            h1, h3, h5 {
+                margin-top: 20px;
             }
-        }
 
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            #img-id {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
@@ -200,10 +196,10 @@
                 Your browser does not support the video tag.
             </video>
             <div class="nav-menu">
-                <a href="file:///C:/Users/KCI/Documents/javascript/VirajTilesWorld.html"><span class="span1">Home</span></a>
-                <a href="file:///C:/Users/KCI/Documents/javascript/VirajTilesWorld.html"><span class="span1">About</span></a>
-                <a href="file:///C:/Users/KCI/Documents/javascript/VirajTilesWorld.html"><span class="span1">Services</span></a>
-                <a href="file:///C:/Users/KCI/Documents/javascript/VirajTilesWorld.html"><span class="span1">Contact Us</span></a>
+                <a href="#"><span class="span1">Home</span></a>
+                <a href="#about"><span class="span1">About</span></a>
+                <a href="#services"><span class="span1">Services</span></a>
+                <a href="#contact"><span class="span1">Contact Us</span></a>
             </div>
         </div>
 
@@ -213,29 +209,27 @@
 
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-12 col-sm-6">
                     <img class="img2 img-responsive" src="https://www.simpolo.net/images/tvc/tag-2024.png" alt="Tag">
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-9">
-                    <h4 class="paragraph">
-                        Hello customers, Viraj Tiles World is a top 10 partner. They have connected for over 20 years and share a silver jubilee partnership with Simpolo Tiles. Simpolo's Digital Showroom and Virtual Space Creator lets you select tiles and design your home from the comfort of your own space. You can browse the complete range of Simpolo tiles, view 3D previews, and see how selected tiles look on both floors and walls. Additionally, you can customise your space with furniture and fixtures using tiles that fit your budget in ultra-realistic 3D.<br><br>
-                        Meanwhile, The Smart Code Technology lets you scan and preview tile designs in 3D and 360°. Customise size and space preferences for a better showroom experience. Each tile design comes with Smart Code Technology that allows you to scan and view realistic previews.
+                <div class="col-xs-12 col-sm-6">
+                    <h4>
+                        Welcome to Viraj Tiles World, a trusted name in tiles and design. With over 20 years of partnership with Simpolo Tiles, we bring innovation and creativity to your space. Explore our virtual showroom to visualize your dream interiors.
                     </h4>
                 </div>
             </div>
         </div>
 
-        <h1><b>Welcome to the Viraj tiles world</b></h1>
+        <h1><b>Welcome to Viraj Tiles World</b></h1>
         <h3>Where We Build Your Visions</h3>
-        <h5>Write a warm welcoming message for visitors. You can mention all the benefits or services with some real examples. You can also state how you emphasize their well-being. This often shows your concern and increases the chances of conversion. Tell people a little more to attract. You can mention some contact details as shown below to get in touch with visitors.</h5>
-        
-        <!-- Updated contact section -->
-        <div class="contact-info">
+        <h5>Discover the perfect tiles to bring your dream home to life.</h5>
+
+        <div class="contact-info" id="contact">
             <span>Call us today: </span><br>
             <span>+91 932-705-7902</span>
         </div>
 
-        <img id="img-id" src="https://www.simpolo.net/images/products/sub-products/calcutta-prism-p.jpg">
+        <img id="img-id" src="https://www.simpolo.net/images/products/sub-products/calcutta-prism-p.jpg" alt="Tile Product">
     </header>
 
     <script>
@@ -262,3 +256,4 @@
     </script>
 </body>
 </html>
+
