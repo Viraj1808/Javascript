@@ -11,7 +11,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
+                   
+            
+             }
 
         .header1 {
             background-color: #5A5A5A;
@@ -27,6 +29,7 @@
             width: 100px;
             height: 100px;
             position: relative;
+            top: -13px;
             border-radius: 50%;
         }
 
@@ -47,15 +50,18 @@
 
         .span1 {
             font-size: 18px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: color 0.3s, transform 0.3s;
-            color: white;
+    text-transform: uppercase;
+    color:white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: color 0.3s, background 0.3s, transform 0.3s;
         }
 
         .span1:hover {
-            color: #FFD700;
-            transform: scale(1.1);
+              color: white;
+    background:black; /* Add hover background */
+    transform: scale(1.1);
         }
 
         .header2 img {
@@ -79,6 +85,8 @@
             max-width: 190px;
             transition: transform 0.3s, box-shadow 0.3s;
             margin: auto;
+            position: relative;
+            top: 20px;
         }
 
         .img2:hover {
@@ -153,7 +161,16 @@
                 max-width: 100%;
             }
         }
-
+        .paragraph{
+        	margin-top:30px;
+        }
+        #address{
+        	width: 20px;
+        	text-transform: capitalize;
+        }
+        h1:hover{
+           transform: scale(1.1);
+        }
         @media (max-width: 768px) {
             .nav-menu {
                 gap: 8px;
@@ -206,14 +223,19 @@
         <div class="header2">
             <img id="img1" src="https://www.simpolo.net/images/slider/home/03.jpg" alt="Slider">
         </div>
-
+<div style="background-image: url(https://www.simpolo.net/images/products/sub-products/01_spectra-chilli-preview.jpg); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            width: 100%;">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
                     <img class="img2 img-responsive" src="https://www.simpolo.net/images/tvc/tag-2024.png" alt="Tag">
                 </div>
                 <div class="col-xs-12 col-sm-6">
-                    <h4>
+                    <h4 class="paragraph">
                         Welcome to Viraj Tiles World, a trusted name in tiles and design. With over 20 years of partnership with Simpolo Tiles, we bring innovation and creativity to your space. Explore our virtual showroom to visualize your dream interiors.
                     </h4>
                 </div>
@@ -226,10 +248,12 @@
 
         <div class="contact-info" id="contact">
             <span>Call us today: </span><br>
-            <span>+91 932-705-7902</span>
+            <span>+91 932-705-7902</span><br><br>
+            <span id="address"> our Branch:-rabari colony,opp.mangaldeep party plot N.H.No-8,amraiwadi,ahmedabad-26</span>
+        </div>
         </div>
 
-        <img id="img-id" src="https://www.simpolo.net/images/products/sub-products/calcutta-prism-p.jpg" alt="Tile Product">
+        <!-- <img id="img-id" src="https://www.simpolo.net/images/products/sub-products/calcutta-prism-p.jpg" alt="Tile Product"> -->
     </header>
 
     <script>
@@ -256,4 +280,3 @@
     </script>
 </body>
 </html>
-
