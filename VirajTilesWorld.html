@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/plasticine/100/valorant.png">
     <style>
         body {
             margin: 0;
@@ -171,6 +172,24 @@
         h1:hover{
            transform: scale(1.1);
         }
+        .img3{
+        	background-image: url(https://www.simpolo.net/images/products/sub-products/01_spectra-chilli-preview.jpg); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+            height: 100vh; 
+            width: 100%;
+            animation-name:jump;
+            animation: jump 2s ease-in-out infinite;
+        }
+        @keyframes jump{
+        	from{
+        		left:10px;
+        	}
+        	to{
+        		rig: 300px;
+        	}
+        }
         @media (max-width: 768px) {
             .nav-menu {
                 gap: 8px;
@@ -223,12 +242,7 @@
         <div class="header2">
             <img id="img1" src="https://www.simpolo.net/images/slider/home/03.jpg" alt="Slider">
         </div>
-<div style="background-image: url(https://www.simpolo.net/images/products/sub-products/01_spectra-chilli-preview.jpg); 
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat; 
-            height: 100vh; 
-            width: 100%;">
+<div class="img3">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-6">
